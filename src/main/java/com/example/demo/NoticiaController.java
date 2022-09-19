@@ -15,9 +15,9 @@ public class NoticiaController {
         this.test = test;
     }
 
-    @GetMapping(path = "/url")
-    public ResponseEntity<?> salvaNoticias(@PathVariable(value = "url") String url) throws Exception {
-        test.salvaNoticiasBanco(url);
+    @GetMapping(path = "/")
+    public ResponseEntity<?> salvaNoticias() throws Exception {
+        test.salvaNoticiasBanco();
         return new ResponseEntity<>(HttpStatus.CREATED) ;
     }
 
