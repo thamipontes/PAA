@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class NoticiaController {
@@ -17,8 +18,8 @@ public class NoticiaController {
     }
 
     @PostMapping(path = "/")
-    public ResponseEntity<?> salvaNoticias() throws Exception {
-        test.salvaNoticiasBanco();
+    public ResponseEntity<?> salvaNoticias(@RequestBody String url) throws Exception {
+        test.salvaNoticiasBanco(url);
         return new ResponseEntity<>(HttpStatus.CREATED) ;
     }
 

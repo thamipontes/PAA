@@ -25,9 +25,9 @@ public class Test {
         this.noticiaRepository = noticiaRepository;
     }
 
-    public void salvaNoticiasBanco() throws Exception {
+    public void salvaNoticiasBanco(String url) throws Exception {
 
-        String feed = "https://g1.globo.com/dynamo/musica/rss2.xml";
+        String feed = url;
 //
         URL feedUrl = new URL(feed);
 
