@@ -28,4 +28,10 @@ public class NoticiaController {
 
         return new ResponseEntity<>(test.ranking(titulo), HttpStatus.OK) ;
     }
+
+    @GetMapping(path = "/")
+    public ResponseEntity<?> pegaTodasNoticias() throws Exception {
+
+        return new ResponseEntity<>(test.allNoticias(), HttpStatus.OK) ;
+    }
 }

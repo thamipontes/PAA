@@ -25,6 +25,10 @@ public class Test {
         this.noticiaRepository = noticiaRepository;
     }
 
+    public List<Noticia> allNoticias(){
+        return this.noticiaRepository.findAll();
+    }
+
     public void salvaNoticiasBanco(String url) throws Exception {
 
         String feed = url;
